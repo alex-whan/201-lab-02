@@ -59,14 +59,28 @@ if(formerTravelIndustry == 'no'){
 }
 
 // Question 4
+var likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
+console.log(userName + ' answered \"' + likesAnimalCrossing + '\" to Question 4.');
+
+//While loop to force user to answer 'yes' or 'no'
+while( (likesAnimalCrossing != 'yes') && (likesAnimalCrossing = 'no') ){
+  likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
+}
+
+// If/Else statement to determine alert response
+if(likesAnimalCrossing == 'no'){
+  alert('WRONG! Nintendo\'s beloved and relaxing \"Animal Crossing\" has been one of my favorite games since all the way back in 2002.');
+} else {
+  alert('YES! You really earned the bells with that one. Nintendo\'s \"Animal Crossing\" has been a favorite of mine since 2002.');
+}
+
+// Question 5
 
 
 //While loop to force user to answer 'yes' or 'no'
 
 
 // If/Else statement to determine alert response
-
-
 
 
 
