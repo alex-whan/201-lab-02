@@ -43,7 +43,20 @@ if(favoriteFruit == 'no'){
 }
 
 // Question 3
+var formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
+console.log(userName + ' answered \"' + formerTravelIndustry + '\" to Question 3.');
 
+//While loop to force user to answer 'yes' or 'no'
+while( (formerTravelIndustry != 'yes') && (formerTravelIndustry != 'no') ){
+  formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".');
+}
+
+// If/Else statement to determine alert response
+if(formerTravelIndustry == 'no'){
+  alert('Close, but no cigar. I was a program manager in a Seattle-based travel company before switching to a career in software development.');
+} else {
+  alert('Nice work! That\'s correct - I was a program manager in a Seattle-based travel company before switching to a career in software development.');
+}
 
 
 
