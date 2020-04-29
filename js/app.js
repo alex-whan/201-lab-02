@@ -2,14 +2,14 @@
 
 // User welcome greeting message
 var userName = prompt('Hello! Welcome to my personal page for Lab 2 of Code 201. What is your name?');
-console.log('The user\'s name is: ' + userName)
+//console.log('The user\'s name is: ' + userName)
 alert('It\'s wonderful to meet you, ' + userName + '! I hope that your visit to this page will help you learn a bit more about me. Please read my brief biography, and scroll down to challenge your memory with my \"About Me\" quiz!');
 
 // "About Me" Guessing Game Quiz - maybe needs to just be unknown knowledge rather than info from the "About Me"?
 
 // Question 1
 var fromSeattle = prompt('Question 1: Am I from the Seattle area? Please answer \"yes\" or \"no\".').toLowerCase();
-console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
+//console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
 
 // While loop to force user to answer 'yes' or 'no'
 while( (fromSeattle != 'yes') && (fromSeattle != 'no') ){
@@ -25,7 +25,7 @@ if(fromSeattle == 'no'){
 
 // Question 2
 var favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or something else? Please answer \"yes\" or \"no\".').toLowerCase();
-console.log(userName + ' answered \"' + favoriteFruit + '\" to Question 2.');
+//console.log(userName + ' answered \"' + favoriteFruit + '\" to Question 2.');
 
 // While loop to force user to answer 'yes' or 'no'
 while( (favoriteFruit != 'yes') && (favoriteFruit != 'no') ){
@@ -41,7 +41,7 @@ if(favoriteFruit == 'no'){
 
 // Question 3
 var formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
-console.log(userName + ' answered \"' + formerTravelIndustry + '\" to Question 3.');
+//console.log(userName + ' answered \"' + formerTravelIndustry + '\" to Question 3.');
 
 //While loop to force user to answer 'yes' or 'no'
 while( (formerTravelIndustry != 'yes') && (formerTravelIndustry != 'no') ){
@@ -57,7 +57,7 @@ if(formerTravelIndustry == 'no'){
 
 // Question 4
 var likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
-console.log(userName + ' answered \"' + likesAnimalCrossing + '\" to Question 4.');
+//console.log(userName + ' answered \"' + likesAnimalCrossing + '\" to Question 4.');
 
 //While loop to force user to answer 'yes' or 'no'
 while( (likesAnimalCrossing != 'yes') && (likesAnimalCrossing != 'no') ){
@@ -73,7 +73,7 @@ if(likesAnimalCrossing == 'no'){
 
 // Question 5
 var isNorthwestBest = prompt('Last, but not least, we have Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
-console.log(userName + ' answered \"' + isNorthwestBest + '\" to Question 5.')
+//console.log(userName + ' answered \"' + isNorthwestBest + '\" to Question 5.')
 
 //While loop to force user to answer 'yes' or 'no'
 while( (isNorthwestBest != 'yes') && (isNorthwestBest != 'no') ){

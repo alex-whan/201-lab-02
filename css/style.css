@@ -1,13 +1,22 @@
+
 body {
   background-color: darkslategrey;
-  padding: 10px;
-  margin: 5px;
+
+}
+
+#main-header {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: teal;
+
 }
 
 h1 {
   display: block;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   font-weight: bold;
   color: white;
   font-size: 2em;
@@ -17,11 +26,11 @@ h1 {
 h2 {
   display: block;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
   font-weight: bold;
   color: white;
-  font-size: 1.5em;
-  margin: 10px;
+  font-size: 1.75em;
+  margin-top: 60px;
 }
 
 #bio-photo {
@@ -41,7 +50,7 @@ h2 {
 p {
   display: block;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
   color: white;
   padding: 10px;
