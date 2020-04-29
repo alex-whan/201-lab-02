@@ -35,6 +35,10 @@ h2 {
   margin-top: 20px;
 }
 
+ol>li {
+  display: block;
+}
+
 #about-me {
   display: block;
   text-align: center;
