@@ -1,8 +1,5 @@
 'use strict';
 
-// while( (isSithLordOrMaster != 'yes') && (isSithLordOrMaster != 'no') ){
-  // isSithLordOrMaster = prompt('Are you a Sith Lord? (yes or no)).toLowerCase();
-
 // User welcome greeting message
 var userName = prompt('Hello! Welcome to my personal page for Lab 2 of Code 201. What is your name?');
 console.log('The user\'s name is: ' + userName)
@@ -75,14 +72,22 @@ if(likesAnimalCrossing == 'no'){
 }
 
 // Question 5
-
+var isNorthwestBest = prompt('Last, but not least, we have Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
+console.log(userName + ' answered \"' + isNorthwestBest + '\" to Question 5.')
 
 //While loop to force user to answer 'yes' or 'no'
-
+while( (isNorthwestBest != 'yes') && (isNorthwestBest != 'no') ){
+  isNorthwestBest = prompt('Last, but not least, we have Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
+}
 
 // If/Else statement to determine alert response
+if(isNorthwestBest == 'no'){
+  alert('You know better than that! The beautiful Pacific Northwest is absolutely the best place on Earth.');
+} else {
+  alert('Bingo. Truer words have never been spoken! The Pacific Northwest is, in fact, the best.');
+}
 
-
-
+// Final summary with user's name
+alert('You\'ve made it to the end of the quiz, ' + userName + '! Great work. Thanks for taking the time to learn a bit more about me. I hope to add more and more questions to this quiz in the future - lucky you!');
 
 
