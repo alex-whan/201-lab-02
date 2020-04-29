@@ -60,7 +60,7 @@ var likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please 
 console.log(userName + ' answered \"' + likesAnimalCrossing + '\" to Question 4.');
 
 //While loop to force user to answer 'yes' or 'no'
-while( (likesAnimalCrossing != 'yes') && (likesAnimalCrossing = 'no') ){
+while( (likesAnimalCrossing != 'yes') && (likesAnimalCrossing != 'no') ){
   likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
 }
 
