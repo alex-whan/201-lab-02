@@ -12,12 +12,12 @@ var fromSeattle = prompt('Question 1: Am I from the Seattle area? Please answer 
 //console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
 
 // While loop to force user to answer 'yes' or 'no'
-while( (fromSeattle != 'yes') && (fromSeattle != 'no') ){
+while( (fromSeattle !== 'yes') && (fromSeattle !== 'no') ){
   fromSeattle = prompt('Question 1: Am I from the Seattle area? Please answer \"yes\" or \"no\".').toLowerCase();
 }
 
 // If/Else statement to determine alert response
-if(fromSeattle == 'no'){
+if(fromSeattle === 'no'){
   alert('Solid try, but incorrect. I am from the suburbs of Seattle. Issaquah for life!');
 } else {
   alert('Nicely done! I am indeed from the Seattle area. Issaquah for life!');
@@ -28,12 +28,12 @@ var favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or somethin
 //console.log(userName + ' answered \"' + favoriteFruit + '\" to Question 2.');
 
 // While loop to force user to answer 'yes' or 'no'
-while( (favoriteFruit != 'yes') && (favoriteFruit != 'no') ){
+while( (favoriteFruit !== 'yes') && (favoriteFruit !== 'no') ){
   favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or something else? Please answer \"yes\" or \"no\".').toLowerCase();
 }
 
 // If/Else statement to determine alert response
-if(favoriteFruit == 'no'){
+if(favoriteFruit === 'no'){
   alert('No dice! My favorite fruit is the venerable and delicious pear. No competition!');
 } else {
   alert('YES! You got it! The pear is the greatest fruit on the planet. Versatile and delicious.');
@@ -44,12 +44,12 @@ var formerTravelIndustry = prompt('Question 3: Did I work in the travel industry
 //console.log(userName + ' answered \"' + formerTravelIndustry + '\" to Question 3.');
 
 //While loop to force user to answer 'yes' or 'no'
-while( (formerTravelIndustry != 'yes') && (formerTravelIndustry != 'no') ){
+while( (formerTravelIndustry !== 'yes') && (formerTravelIndustry !== 'no') ){
   formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
 }
 
 // If/Else statement to determine alert response
-if(formerTravelIndustry == 'no'){
+if(formerTravelIndustry === 'no'){
   alert('Close, but no cigar. I was a program manager in a Seattle-based travel company before switching to a career in software development.');
 } else {
   alert('Nice work! That\'s correct - I was a program manager in a Seattle-based travel company before switching to a career in software development.');
@@ -60,12 +60,12 @@ var likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please 
 //console.log(userName + ' answered \"' + likesAnimalCrossing + '\" to Question 4.');
 
 //While loop to force user to answer 'yes' or 'no'
-while( (likesAnimalCrossing != 'yes') && (likesAnimalCrossing != 'no') ){
+while( (likesAnimalCrossing !== 'yes') && (likesAnimalCrossing !== 'no') ){
   likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
 }
 
 // If/Else statement to determine alert response
-if(likesAnimalCrossing == 'no'){
+if(likesAnimalCrossing === 'no'){
   alert('WRONG! Nintendo\'s beloved and relaxing \"Animal Crossing\" has been one of my favorite games since all the way back in 2002.');
 } else {
   alert('YES! You really earned the bells with that one. Nintendo\'s \"Animal Crossing\" has been a favorite of mine since 2002.');
@@ -76,12 +76,12 @@ var isNorthwestBest = prompt('Last, but not least, we have Question 5: Is the Pa
 //console.log(userName + ' answered \"' + isNorthwestBest + '\" to Question 5.')
 
 //While loop to force user to answer 'yes' or 'no'
-while( (isNorthwestBest != 'yes') && (isNorthwestBest != 'no') ){
+while( (isNorthwestBest !== 'yes') && (isNorthwestBest !== 'no') ){
   isNorthwestBest = prompt('Last, but not least, we have Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
 }
 
 // If/Else statement to determine alert response
-if(isNorthwestBest == 'no'){
+if(isNorthwestBest === 'no'){
   alert('You know better than that! The beautiful Pacific Northwest is absolutely the best place on Earth.');
 } else {
   alert('Bingo. Truer words have never been spoken! The Pacific Northwest is, in fact, the best.');
