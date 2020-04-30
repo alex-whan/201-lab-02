@@ -1,12 +1,15 @@
 'use strict';
 
-// Variable to keep count of correct answers
-var correctAnswers = 0;
+function greeting() {
+  // Variable to keep count of correct answers
+  var correctAnswers = 0;
 
-// User welcome greeting message
-var userName = prompt('Hello! Welcome to my personal page for Lab 2 of Code 201. What is your name?');
-console.log('The user\'s name is: ' + userName)
-alert('It\'s wonderful to meet you, ' + userName + '! I hope that your visit to this page will help you learn a bit more about me. Please read my brief biography, and scroll down to challenge your memory with my \"About Me\" quiz!');
+  // User welcome greeting message
+  var userName = prompt('Hello! Welcome to my personal page for Lab 2 of Code 201. What is your name?');
+  console.log('The user\'s name is: ' + userName)
+  alert('It\'s wonderful to meet you, ' + userName + '! I hope that your visit to this page will help you learn a bit more about me. Please read my brief biography, and scroll down to challenge your memory with my \"About Me\" quiz!');
+}
+greeting();
 
 // "About Me" Guessing Game Quiz
 
