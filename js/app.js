@@ -97,6 +97,46 @@ if(isNorthwestBest === 'no'){
 
 
 // Question 6
+//var guessesLeft = 4;
+var correctGuess = Math.floor((Math.random() * 10) + 1); // Checked this on W3
+console.log('The secret number for this session is ' + correctGuess + '.');
+var whatNumber = prompt('Now for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10.');
+
+for(var guessesLeft = 3; guessesLeft >= 0; guessesLeft--){
+  if(whatNumber == correctGuess){
+    correctAnswers++;
+    alert('You nailed it! Great work to guess a number I didn\'t even know myself!');
+    break;    
+  } 
+  else if(whatNumber > correctGuess){
+    whatNumber = prompt('Too high! Please try again. You have ' + guessesLeft + ' guesses remaining.');
+    console.log(userName + ' has ' + guessesLeft + ' guesses remaining.');
+  } 
+  else if(whatNumber < correctGuess){
+    whatNumber = prompt('Too low! Please try again. You have ' + guessesLeft + ' guesses remaining.');
+    console.log(userName + ' has ' + guessesLeft + ' guesses remaining.');
+  } else {
+    alert('Sorry! The number on my mind was ' + correctGuess + ', although to be honest, I have no idea where that number came from either.'); 
+    // whatNumber = prompt('Nope! Please try again. You have ' + guessesLeft + ' remaining.');
+    // console.log(userName + ' has ' + guessesLeft + ' guesses remaining.');
+  }
+ 
+}
+
+
+
+/* while (guessesLeft > 1) {
+  if(whatNumber == correctGuess){
+    alert('You nailed it! Great work to guess a number I didn\'t even know myself!');
+    correctAnswers++;
+    break;
+  } else {
+    guessesLeft--;
+    whatNumber = prompt('Nope! Please try again. You have ' + guessesLeft + ' guesses remaining.');
+  }
+} */ 
+
+
 
 
 
@@ -107,8 +147,8 @@ if(isNorthwestBest === 'no'){
 
 
 // Final tally of correct answers
-console.log(userName + ' guessed ' + correctAnswers + ' of 5 questions correctly.');
-alert('You guessed ' + correctAnswers + ' of 5 questions correctly!');
+console.log(userName + ' guessed ' + correctAnswers + ' of 7 questions correctly.');
+alert('You guessed ' + correctAnswers + ' of 7 questions correctly!');
 
 // Final summary with user's name
 alert('You\'ve made it to the end of the quiz, ' + userName + '! Great work. Thanks for taking the time to learn a bit more about me. I hope to add more and more questions to this quiz in the future - lucky you!');
