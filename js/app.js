@@ -97,32 +97,31 @@ if(isNorthwestBest === 'no'){
 
 
 // Question 6
-//var guessesLeft = 4;
 var correctGuess = Math.floor((Math.random() * 10) + 1); // Checked this on W3
 console.log('The secret number for this session is ' + correctGuess + '.');
-var whatNumber = prompt('Now for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10.');
+var whatNumber = prompt('Now for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10. You have 4 guesses.');
 
-for(var guessesLeft = 3; guessesLeft >= 0; guessesLeft--){
+for(var guesses = 1; guesses < 5; guesses++){
   if(whatNumber == correctGuess){
     correctAnswers++;
     alert('You nailed it! Great work to guess a number I didn\'t even know myself!');
     break;    
   } 
+  else if(guesses == 4) {
+    alert('Sorry! The number on my mind was ' + correctGuess + ', although to be honest, I have no idea where that number came from either.');
+    break;
+  }
   else if(whatNumber > correctGuess){
-    whatNumber = prompt('Too high! Please try again. You have ' + guessesLeft + ' guesses remaining.');
-    console.log(userName + ' has ' + guessesLeft + ' guesses remaining.');
+    whatNumber = prompt('Too high! Please try again. You have ' + guesses + ' of 4 guesses remaining.');
+    console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
   } 
   else if(whatNumber < correctGuess){
-    whatNumber = prompt('Too low! Please try again. You have ' + guessesLeft + ' guesses remaining.');
-    console.log(userName + ' has ' + guessesLeft + ' guesses remaining.');
+    whatNumber = prompt('Too low! Please try again. You have used ' + guesses + ' of 4 guesses.');
+    console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
   } else {
-    alert('Sorry! The number on my mind was ' + correctGuess + ', although to be honest, I have no idea where that number came from either.'); 
-    // whatNumber = prompt('Nope! Please try again. You have ' + guessesLeft + ' remaining.');
-    // console.log(userName + ' has ' + guessesLeft + ' guesses remaining.');
+    whatNumber = prompt('Sorry! Please try again. You have used ' + guesses + ' of 4 guesses.');    
   }
- 
-}
-
+}   
 
 
 /* while (guessesLeft > 1) {
@@ -145,13 +144,14 @@ for(var guessesLeft = 3; guessesLeft >= 0; guessesLeft--){
 
 
 
-
+/*
 // Final tally of correct answers
 console.log(userName + ' guessed ' + correctAnswers + ' of 7 questions correctly.');
 alert('You guessed ' + correctAnswers + ' of 7 questions correctly!');
 
 // Final summary with user's name
 alert('You\'ve made it to the end of the quiz, ' + userName + '! Great work. Thanks for taking the time to learn a bit more about me. I hope to add more and more questions to this quiz in the future - lucky you!');
+*/
 
 
 
