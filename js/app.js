@@ -12,40 +12,46 @@ function greeting() {
 greeting();
 
 // "About Me" Guessing Game Quiz
+ // Question 1
+function seattle() {
+  var fromSeattle = prompt('Question 1: Am I from the Seattle area? Please answer \"yes\" or \"no\".').toLowerCase();
 
-// Question 1
-var fromSeattle = prompt('Question 1: Am I from the Seattle area? Please answer \"yes\" or \"no\".').toLowerCase();
+  // While loop to force user to answer 'yes' or 'no'
+  while( (fromSeattle !== 'yes') && (fromSeattle !== 'no') ){
+    fromSeattle = prompt('Question 1: Am I from the Seattle area? Please answer \"yes\" or \"no\".').toLowerCase();
+  }
 
-// While loop to force user to answer 'yes' or 'no'
-while( (fromSeattle !== 'yes') && (fromSeattle !== 'no') ){
-  fromSeattle = prompt('Question 1: Am I from the Seattle area? Please answer \"yes\" or \"no\".').toLowerCase();
+  // If/Else statement to determine alert response
+  if(fromSeattle === 'no'){
+    alert('Solid try, but incorrect. I am from the suburbs of Seattle. Issaquah for life!');
+  } else {
+    correctAnswers++; 
+    console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
+    alert('Nicely done! I am indeed from the Seattle area. Issaquah for life!');
+  }
 }
+seattle(); 
 
-// If/Else statement to determine alert response
-if(fromSeattle === 'no'){
-  alert('Solid try, but incorrect. I am from the suburbs of Seattle. Issaquah for life!');
-} else {
-  correctAnswers++; 
-  console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
-  alert('Nicely done! I am indeed from the Seattle area. Issaquah for life!');
-}
 
 // Question 2
-var favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or something else? Please answer \"yes\" or \"no\".').toLowerCase();
+function fruit() {
+  var favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or something else? Please answer \"yes\" or \"no\".').toLowerCase();
 
-// While loop to force user to answer 'yes' or 'no'
-while( (favoriteFruit !== 'yes') && (favoriteFruit !== 'no') ){
-  favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or something else? Please answer \"yes\" or \"no\".').toLowerCase();
-}
+  // While loop to force user to answer 'yes' or 'no'
+  while( (favoriteFruit !== 'yes') && (favoriteFruit !== 'no') ){
+    favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or something else? Please answer \"yes\" or \"no\".').toLowerCase();
+  }
 
-// If/Else statement to determine alert response
-if(favoriteFruit === 'no'){
-  alert('No dice! My favorite fruit is the venerable and delicious pear. No competition!');
-} else {
-  correctAnswers++;
-  console.log(userName + ' answered \"' + favoriteFruit + '\" to Question 2.'); 
-  alert('YES! You got it! The pear is the greatest fruit on the planet. Versatile and delicious.');
+  // If/Else statement to determine alert response
+  if(favoriteFruit === 'no'){
+    alert('No dice! My favorite fruit is the venerable and delicious pear. No competition!');
+  } else {
+    correctAnswers++;
+    console.log(userName + ' answered \"' + favoriteFruit + '\" to Question 2.'); 
+    alert('YES! You got it! The pear is the greatest fruit on the planet. Versatile and delicious.');
+  }
 }
+fruit(); 
 
 // Question 3
 var formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
