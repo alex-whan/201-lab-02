@@ -79,11 +79,11 @@ if(likesAnimalCrossing === 'no'){
 }
 
 // Question 5
-var isNorthwestBest = prompt('Last, but not least, we have Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
+var isNorthwestBest = prompt('Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
 
 //While loop to force user to answer 'yes' or 'no'
 while( (isNorthwestBest !== 'yes') && (isNorthwestBest !== 'no') ){
-  isNorthwestBest = prompt('Last, but not least, we have Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
+  isNorthwestBest = prompt('Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
 }
 
 // If/Else statement to determine alert response
@@ -104,7 +104,7 @@ var correctGuess = Math.floor((Math.random() * 10) + 1); // Checked this on W3
 console.log('The secret number for this session is ' + correctGuess + '.');
 
 //This will be the random number
-var whatNumber = prompt('Now for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10. You have 4 guesses.');
+var whatNumber = prompt('Question 6 calls for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10. You have 4 guesses.');
 
 //For loop for 4 guesses - had trouble with getting this to work properly while iterating DOWN, so I switch to iterating UP as a workaround, although the language is clunkier than I would like
 
@@ -141,22 +141,41 @@ for(var guesses = 1; guesses < 5; guesses++){
 // Question 7
 
 // Array for "my favorite Britpop bands"
-var myBritpopBands = ['Oasis', 'Pulp', 'Blur'];
+var myBritpopBands = ['oasis', 'pulp', 'blur'];
 
+// Ask user to guess my favorite Britpop band
+var guessBand = prompt('Last, but not least, we have Question 7. Another mind game, of sorts. You have 6 guesses, and there are multiple answers: What is my favorite Britpop band?').toLowerCase();
 
-for(var i = 0; i < myBritpopBands.length; i++){
-  console.log(myBritpopBands[i]);
+// For loop of 6 guesses
+
+for(var bandGuesses = 1; bandGuesses < 7; bandGuesses++){
+// If user guesses correctly, exit loop and add +1 to correctGuess score
+  if(guessBand === myBritpopBands[0, 1, 2]){
+    correctAnswers++;
+    alert('Oi! You\'re some kind of mind reader, innit? That is indeed one of the UK\'s finest groups.');
+    console.log(userName + ' guessed ' + guessBand + '.');
+    break;
+  }
+
+  // If user exhausts their 6 attempts, exit loop and tell them what the possibilities were
+  else if(bandGuesses == 6) {
+    alert('Tough luck, mate. That\s a good one, but I was looking for one of the Big Three of ' + myBritpopBands[0] + ', ' + myBritpopBands[1] + ', or ' + myBritpopBands[2] + '.');
+    console.log(userName + ' guessed ' + guessBand + '.');
+    break;
+
+  } else { // Keep giving user guesses until they hit 6
+    guessBand = prompt('Never heard of them. Try again! You have used ' + bandGuesses + ' of 6 guesses.').toLowerCase();
+    console.log(userName + ' guessed ' + guessBand + '.');
+  }
 }
 
-
-/*
 // Final tally of correct answers
 console.log(userName + ' guessed ' + correctAnswers + ' of 7 questions correctly.');
 alert('You guessed ' + correctAnswers + ' of 7 questions correctly!');
 
 // Final summary with user's name
 alert('You\'ve made it to the end of the quiz, ' + userName + '! Great work. Thanks for taking the time to learn a bit more about me. I hope to add more and more questions to this quiz in the future - lucky you!');
-*/
+
 
 
 
