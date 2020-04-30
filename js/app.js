@@ -97,51 +97,56 @@ if(isNorthwestBest === 'no'){
 
 
 // Question 6
+
 var correctGuess = Math.floor((Math.random() * 10) + 1); // Checked this on W3
+
+//Console log of the secret number to allow me to better test functionality
 console.log('The secret number for this session is ' + correctGuess + '.');
+
+//This will be the random number
 var whatNumber = prompt('Now for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10. You have 4 guesses.');
 
+//For loop for 4 guesses - had trouble with getting this to work properly while iterating DOWN, so I switch to iterating UP as a workaround, although the language is clunkier than I would like
+
 for(var guesses = 1; guesses < 5; guesses++){
+// If user guesses correctly, exit loop and add +1 to correctGuess score
   if(whatNumber == correctGuess){
     correctAnswers++;
     alert('You nailed it! Great work to guess a number I didn\'t even know myself!');
     break;    
   } 
+
+  // If user exhausts their 4 attempts, exit loop and tell them what the secret number was
   else if(guesses == 4) {
     alert('Sorry! The number on my mind was ' + correctGuess + ', although to be honest, I have no idea where that number came from either.');
     break;
   }
+
+  // If user guesses too high, alert them that their guess was too high and repeat the loop 
   else if(whatNumber > correctGuess){
     whatNumber = prompt('Too high! Please try again. You have ' + guesses + ' of 4 guesses remaining.');
     console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
   } 
+
+  // If user guesses too high, alert them that their guess was too high and repeat the loop 
   else if(whatNumber < correctGuess){
     whatNumber = prompt('Too low! Please try again. You have used ' + guesses + ' of 4 guesses.');
     console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
-  } else {
+
+  } else { // If entry is non-numeric, count one guess and repeat loop
     whatNumber = prompt('Sorry! Please try again. You have used ' + guesses + ' of 4 guesses.');    
   }
 }   
 
-
-/* while (guessesLeft > 1) {
-  if(whatNumber == correctGuess){
-    alert('You nailed it! Great work to guess a number I didn\'t even know myself!');
-    correctAnswers++;
-    break;
-  } else {
-    guessesLeft--;
-    whatNumber = prompt('Nope! Please try again. You have ' + guessesLeft + ' guesses remaining.');
-  }
-} */ 
-
-
-
-
-
-
 // Question 7
 
+// Array for "my favorite Britpop bands"
+var myBritpopBands = ['Oasis', 'Pulp', 'Blur'];
+
+
+for(var i = 0; i < myBritpopBands.length; i++){
+  console.log(myBritpopBands[i]);
+}
 
 
 /*
