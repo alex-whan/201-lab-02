@@ -54,56 +54,64 @@ function fruit() {
 fruit(); 
 
 // Question 3
-var formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
+function travel() {
+  var formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
 
-//While loop to force user to answer 'yes' or 'no'
-while( (formerTravelIndustry !== 'yes') && (formerTravelIndustry !== 'no') ){
-  formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
-}
+  //While loop to force user to answer 'yes' or 'no'
+  while( (formerTravelIndustry !== 'yes') && (formerTravelIndustry !== 'no') ){
+    formerTravelIndustry = prompt('Question 3: Did I work in the travel industry before beginning Code Fellows? Please answer \"yes\" or \"no\".').toLowerCase();
+  }
 
-// If/Else statement to determine alert response
-if(formerTravelIndustry === 'no'){
-  alert('Close, but no cigar. I was a program manager in a Seattle-based travel company before switching to a career in software development.');
-} else {
-  correctAnswers++;
-  console.log(userName + ' answered \"' + formerTravelIndustry + '\" to Question 3.');
-  alert('Nice work! That\'s correct - I was a program manager in a Seattle-based travel company before switching to a career in software development.');
+  // If/Else statement to determine alert response
+  if(formerTravelIndustry === 'no'){
+    alert('Close, but no cigar. I was a program manager in a Seattle-based travel company before switching to a career in software development.');
+  } else {
+    correctAnswers++;
+    console.log(userName + ' answered \"' + formerTravelIndustry + '\" to Question 3.');
+    alert('Nice work! That\'s correct - I was a program manager in a Seattle-based travel company before switching to a career in software development.');
+  }
 }
+travel();
 
 // Question 4
-var likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
+function animalCrossing() {
+  var likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
 
-//While loop to force user to answer 'yes' or 'no'
-while( (likesAnimalCrossing !== 'yes') && (likesAnimalCrossing !== 'no') ){
-  likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
-}
+  //While loop to force user to answer 'yes' or 'no'
+  while( (likesAnimalCrossing !== 'yes') && (likesAnimalCrossing !== 'no') ){
+    likesAnimalCrossing = prompt('Question 4: Do I like Animal Crossing? Please answer \"yes\" or \"no\".').toLowerCase();
+  }
 
-// If/Else statement to determine alert response
-if(likesAnimalCrossing === 'no'){
+  // If/Else statement to determine alert response
+  if(likesAnimalCrossing === 'no'){
   alert('WRONG! Nintendo\'s beloved and relaxing \"Animal Crossing\" has been one of my favorite games since all the way back in 2002.');
 } else {
   correctAnswers++;
   console.log(userName + ' answered \"' + likesAnimalCrossing + '\" to Question 4.'); 
   alert('YES! You really earned the bells with that one. Nintendo\'s \"Animal Crossing\" has been a favorite of mine since 2002.');
 }
+}
+animalCrossing();
 
 // Question 5
-var isNorthwestBest = prompt('Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
+function northwest() {
+  var isNorthwestBest = prompt('Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
 
-//While loop to force user to answer 'yes' or 'no'
-while( (isNorthwestBest !== 'yes') && (isNorthwestBest !== 'no') ){
-  isNorthwestBest = prompt('Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
+  //While loop to force user to answer 'yes' or 'no'
+  while( (isNorthwestBest !== 'yes') && (isNorthwestBest !== 'no') ){
+    isNorthwestBest = prompt('Question 5: Is the Pacific Northwest the best? Please answer \"yes\" or \"no\".').toLowerCase();
+  }
+
+  // If/Else statement to determine alert response
+  if(isNorthwestBest === 'no'){
+    alert('You know better than that! The beautiful Pacific Northwest is absolutely the best place on Earth.');
+  } else {
+    correctAnswers++;
+    console.log(userName + ' answered \"' + isNorthwestBest + '\" to Question 5.'); 
+    alert('Bingo. Truer words have never been spoken! The Pacific Northwest is, in fact, the best.');
+  }
 }
-
-// If/Else statement to determine alert response
-if(isNorthwestBest === 'no'){
-  alert('You know better than that! The beautiful Pacific Northwest is absolutely the best place on Earth.');
-} else {
-  correctAnswers++;
-  console.log(userName + ' answered \"' + isNorthwestBest + '\" to Question 5.'); 
-  alert('Bingo. Truer words have never been spoken! The Pacific Northwest is, in fact, the best.');
-}
-
+northwest();
 
 // Question 6
 
