@@ -147,10 +147,10 @@ var myBritpopBands = ['oasis', 'pulp', 'blur'];
 var guessBand = prompt('Last, but not least, we have Question 7. Another mind game, of sorts. You have 6 guesses, and there are multiple answers: What is my favorite Britpop band?').toLowerCase();
 
 // For loop of 6 guesses
-
 for(var bandGuesses = 1; bandGuesses < 7; bandGuesses++){
-// If user guesses correctly, exit loop and add +1 to correctGuess score
-  if(guessBand === myBritpopBands[0, 1, 2]){
+  
+// If user guesses correctly, exit loop and add +1 to correctGuess score - can't get anything other than last value to register
+  if(guessBand == myBritpopBands[0] || guessBand == myBritpopBands[1] || guessBand == myBritpopBands[2]){
     correctAnswers++;
     alert('Oi! You\'re some kind of mind reader, innit? That is indeed one of the UK\'s finest groups.');
     console.log(userName + ' guessed ' + guessBand + '.');
