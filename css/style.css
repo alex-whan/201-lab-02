@@ -35,8 +35,16 @@ h2 {
   margin-top: 20px;
 }
 
-ol>li {
-  display: block;
+ol {
+  display: inline-block;
+  list-style-type: decimal;
+  text-align: left;
+  color: white;
+}
+
+ol li {
+  font-weight: bold;
+  list-style-type: decimal;
 }
 
 #about-me {
@@ -67,7 +75,7 @@ p {
   display: block;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
+  font-size: 1.1em;
   color: white;
   padding: 10px;
   margin-left: auto;
@@ -77,4 +85,21 @@ p {
 
 footer {
   font-weight: bold;
+  margin: 10px;
+}
+
+footer p {
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+  width: auto;
+  font-size: 1.15em;  
+}
+
+a {
+  color: lightskyblue;
+}
+
+a:visited {
+  color: lightskyblue;
 }
