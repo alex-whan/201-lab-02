@@ -171,16 +171,31 @@ function band() {
   // For loop of 6 guesses
   for(var j = 1; j < 7; j++){
     
+    /* for(var k = 0; k < myBritpopBands.length; k++) {
+      if(guessBand === myBritpopBands[k]) {
+        alert('nailed it!');
+        correctAnswers++;
+        console.log(userName + ' guessed ' + guessBand + '.');
+        break;
+      }
+      break;
+    }*/
+  
+
+
+
+
+
   // If user guesses correctly, exit loop and add +1 to correctGuess score - can't get anything other than last value to register
-    if(guessBand == myBritpopBands[0] || guessBand == myBritpopBands[1] || guessBand == myBritpopBands[2]){
+  if(guessBand == myBritpopBands[0] || guessBand == myBritpopBands[1] || guessBand == myBritpopBands[2]){
       correctAnswers++;
-      alert('Oi! You\'re some kind of mind reader, innit? That is indeed one of the UK\'s finest groups.');
+      alert('Oi! You some kind of mind reader? That is indeed one of the UK\'s finest groups.');
       console.log(userName + ' guessed ' + guessBand + '.');
       break;
     }
 
     // If user exhausts their 6 attempts, exit loop and tell them what the possibilities were
-    else if(j === 6) {
+    if(j === 6) {
       alert('Tough luck, mate. That\s a good one, but I was looking for one of the Big Three of ' + myBritpopBands[0] + ', ' + myBritpopBands[1] + ', or ' + myBritpopBands[2] + '.');
       console.log(userName + ' guessed ' + guessBand + '.');
       break;
@@ -192,6 +207,12 @@ function band() {
   }
 }
 band();
+
+
+
+
+
+
 
 function finalScore() {
   // Final tally of correct answers
