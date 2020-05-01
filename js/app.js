@@ -1,11 +1,13 @@
 'use strict';
 
+// Variable to keep count of correct answers
+ 
+var userName;
+var correctAnswers = 0;
 function greeting() {
-  // Variable to keep count of correct answers
-  var correctAnswers = 0;
-
+  
   // User welcome greeting message
-  var userName = prompt('Hello! Welcome to my personal page for Lab 2 of Code 201. What is your name?');
+  userName = prompt('Hello! Welcome to my personal page for Lab 2 of Code 201. What is your name?');
   console.log('The user\'s name is: ' + userName)
   alert('It\'s wonderful to meet you, ' + userName + '! I hope that your visit to this page will help you learn a bit more about me. Please read my brief biography, and scroll down to challenge your memory with my \"About Me\" quiz!');
 }
@@ -23,11 +25,11 @@ function seattle() {
 
   // If/Else statement to determine alert response
   if(fromSeattle === 'no'){
-    alert('Solid try, but incorrect. I am from the suburbs of Seattle. Issaquah for life!');
+    alert('Solid try, but incorrect. I am from the suburbs of Seattle. Seattle for life!');
   } else {
     correctAnswers++; 
     console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
-    alert('Nicely done! I am indeed from the Seattle area. Issaquah for life!');
+    alert('Nicely done! I am indeed from the Seattle area. Seattle for life!');
   }
 }
 seattle(); 
