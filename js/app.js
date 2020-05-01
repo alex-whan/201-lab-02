@@ -1,9 +1,10 @@
 'use strict';
 
-// Variable to keep count of correct answers
- 
+// Variables to assign a name (userName) and keep count of correct answers (correctAnswers)
+
 var userName;
 var correctAnswers = 0;
+
 function greeting() {
   
   // User welcome greeting message
