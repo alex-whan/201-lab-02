@@ -1,10 +1,11 @@
 'use strict';
 
-// Variables to assign a name (userName) and keep count of correct answers (correctAnswers)
+// Global variables to assign a name (userName) and keep count of correct answers (correctAnswers)
 
 var userName;
 var correctAnswers = 0;
 
+// Greeting message
 function greeting() {
   
   // User welcome greeting message
@@ -26,11 +27,11 @@ function seattle() {
 
   // If/Else statement to determine alert response
   if(fromSeattle === 'no'){
-    alert('Solid try, but incorrect. I am from the suburbs of Seattle. Seattle for life!');
+    alert('Solid try, but incorrect. I am from the suburbs of Seattle. Issaquah for life!');
   } else {
     correctAnswers++; 
     console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
-    alert('Nicely done! I am indeed from the Seattle area. Seattle for life!');
+    alert('Nicely done! I am indeed from the Seattle area. Issaquah for life!');
   }
 }
 seattle(); 
@@ -123,37 +124,37 @@ function guessingGame() {
   console.log('The secret number for this session is ' + correctGuess + '.');
 
   //This will be the random number
-  var whatNumber = prompt('Question 6 calls for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10. You have 4 guesses.');
+  var whatNumber = parseInt(prompt('Question 6 calls for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10. You have 4 guesses.'));
 
   //For loop for 4 guesses - had trouble with getting this to work properly while iterating DOWN, so I switch to iterating UP as a workaround, although the language is clunkier than I would like
 
   for(var guesses = 1; guesses < 5; guesses++){
   // If user guesses correctly, exit loop and add +1 to correctGuess score
-    if(whatNumber == correctGuess){
+    if(whatNumber === correctGuess){
       correctAnswers++;
       alert('You nailed it! Great work to guess a number I didn\'t even know myself!');
       break;    
     } 
 
     // If user exhausts their 4 attempts, exit loop and tell them what the secret number was
-    else if(guesses == 4) {
+    else if(guesses === 4) {
       alert('Sorry! The number on my mind was ' + correctGuess + ', although to be honest, I have no idea where that number came from either.');
       break;
     }
 
     // If user guesses too high, alert them that their guess was too high and repeat the loop 
     else if(whatNumber > correctGuess){
-      whatNumber = prompt('Too high! Please try again. You have ' + guesses + ' of 4 guesses remaining.');
+      whatNumber = parseInt(prompt('Too high! Please try again. You have ' + guesses + ' of 4 guesses remaining.'));
       console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
     } 
 
     // If user guesses too high, alert them that their guess was too high and repeat the loop 
     else if(whatNumber < correctGuess){
-      whatNumber = prompt('Too low! Please try again. You have used ' + guesses + ' of 4 guesses.');
+      whatNumber = parseInt(prompt('Too low! Please try again. You have used ' + guesses + ' of 4 guesses.'));
       console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
 
     } else { // If entry is non-numeric, count one guess and repeat loop
-      whatNumber = prompt('Sorry! Please try again. You have used ' + guesses + ' of 4 guesses.');    
+      whatNumber = parseInt(prompt('Sorry! Please try again. You have used ' + guesses + ' of 4 guesses.'));    
     }
   }   
 }
@@ -168,7 +169,7 @@ function band() {
   var guessBand = prompt('Last, but not least, we have Question 7. Another mind game, of sorts. You have 6 guesses, and there are multiple answers: What is my favorite Britpop band?').toLowerCase();
 
   // For loop of 6 guesses
-  for(var bandGuesses = 1; bandGuesses < 7; bandGuesses++){
+  for(var j = 1; j < 7; j++){
     
   // If user guesses correctly, exit loop and add +1 to correctGuess score - can't get anything other than last value to register
     if(guessBand == myBritpopBands[0] || guessBand == myBritpopBands[1] || guessBand == myBritpopBands[2]){
@@ -179,13 +180,13 @@ function band() {
     }
 
     // If user exhausts their 6 attempts, exit loop and tell them what the possibilities were
-    else if(bandGuesses == 6) {
+    else if(j === 6) {
       alert('Tough luck, mate. That\s a good one, but I was looking for one of the Big Three of ' + myBritpopBands[0] + ', ' + myBritpopBands[1] + ', or ' + myBritpopBands[2] + '.');
       console.log(userName + ' guessed ' + guessBand + '.');
       break;
 
     } else { // Keep giving user guesses until they hit 6
-      guessBand = prompt('Never heard of them. Try again! You have used ' + bandGuesses + ' of 6 guesses.').toLowerCase();
+      guessBand = prompt('Never heard of them. Try again! You have used ' + j + ' of 6 guesses.').toLowerCase();
       console.log(userName + ' guessed ' + guessBand + '.');
     }
   }
