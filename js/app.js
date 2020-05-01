@@ -32,7 +32,6 @@ function seattle() {
 }
 seattle(); 
 
-
 // Question 2
 function fruit() {
   var favoriteFruit = prompt('Question 2: Is my favorite fruit a pear? Or something else? Please answer \"yes\" or \"no\".').toLowerCase();
@@ -190,14 +189,15 @@ function band() {
 }
 band();
 
-// Final tally of correct answers
-console.log(userName + ' guessed ' + correctAnswers + ' of 7 questions correctly.');
-alert('You guessed ' + correctAnswers + ' of 7 questions correctly!');
+function finalScore() {
+  // Final tally of correct answers
+  console.log(userName + ' guessed ' + correctAnswers + ' of 7 questions correctly.');
+  alert('You guessed ' + correctAnswers + ' of 7 questions correctly!');
 
-// Final summary with user's name
-alert('You\'ve made it to the end of the quiz, ' + userName + '! Great work. Thanks for taking the time to learn a bit more about me. I hope to add more and more questions to this quiz in the future - lucky you!');
-
-
+  // Final summary with user's name
+  alert('You\'ve made it to the end of the quiz, ' + userName + '! Great work. Thanks for taking the time to learn a bit more about me. I hope to add more and more questions to this quiz in the future - lucky you!');
+}
+finalScore();
 
 
 
