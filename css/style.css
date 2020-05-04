@@ -54,6 +54,23 @@ ol li {
   padding: 5px;
 }
 
+ul {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-family: Merriweather, serif;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+ul li {
+  font-weight: bold;
+  font-family: Merriweather, serif;
+  font-size: 1em;
+  padding: 2px;
+  font-weight: normal;
+}
+
 #about-me {
   display: block;
   text-align: center;
