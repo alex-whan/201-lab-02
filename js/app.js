@@ -10,7 +10,6 @@ function greeting() {
   
   // User welcome greeting message
   userName = prompt('Hello! Welcome to my personal page for Lab 2 of Code 201. What is your name?');
-  console.log('The user\'s name is: ' + userName)
   alert('It\'s wonderful to meet you, ' + userName + '! I hope that your visit to this page will help you learn a bit more about me. Please read my brief biography, and scroll down to challenge your memory with my \"About Me\" quiz!');
 }
 greeting();
@@ -30,7 +29,6 @@ function seattle() {
     alert('Solid try, but incorrect. I am from the suburbs of Seattle. Issaquah for life!');
   } else {
     correctAnswers++; 
-    console.log(userName + ' answered \"' + fromSeattle + '\" to Question 1.');
     alert('Nicely done! I am indeed from the Seattle area. Issaquah for life!');
   }
 }
@@ -50,7 +48,6 @@ function fruit() {
     alert('No dice! My favorite fruit is the venerable and delicious pear. No competition!');
   } else {
     correctAnswers++;
-    console.log(userName + ' answered \"' + favoriteFruit + '\" to Question 2.'); 
     alert('YES! You got it! The pear is the greatest fruit on the planet. Versatile and delicious.');
   }
 }
@@ -70,7 +67,6 @@ function travel() {
     alert('Close, but no cigar. I was a program manager in a Seattle-based travel company before switching to a career in software development.');
   } else {
     correctAnswers++;
-    console.log(userName + ' answered \"' + formerTravelIndustry + '\" to Question 3.');
     alert('Nice work! That\'s correct - I was a program manager in a Seattle-based travel company before switching to a career in software development.');
   }
 }
@@ -90,7 +86,6 @@ function animalCrossing() {
   alert('WRONG! Nintendo\'s beloved and relaxing \"Animal Crossing\" has been one of my favorite games since all the way back in 2002.');
 } else {
   correctAnswers++;
-  console.log(userName + ' answered \"' + likesAnimalCrossing + '\" to Question 4.'); 
   alert('YES! You really earned the bells with that one. Nintendo\'s \"Animal Crossing\" has been a favorite of mine since 2002.');
 }
 }
@@ -110,7 +105,6 @@ function northwest() {
     alert('You know better than that! The beautiful Pacific Northwest is absolutely the best place on Earth.');
   } else {
     correctAnswers++;
-    console.log(userName + ' answered \"' + isNorthwestBest + '\" to Question 5.'); 
     alert('Bingo. Truer words have never been spoken! The Pacific Northwest is, in fact, the best.');
   }
 }
@@ -119,9 +113,6 @@ northwest();
 // Question 6
 function guessingGame() {
   var correctGuess = Math.floor((Math.random() * 10) + 1); // Checked this on W3
-
-  //Console log of the secret number to allow me to better test functionality
-  console.log('The secret number for this session is ' + correctGuess + '.');
 
   //This will be the random number
   var whatNumber = parseInt(prompt('Question 6 calls for a mind game. What number am I thinking of, at this exact moment? Please enter a number between 1 and 10. You have 4 guesses.'));
@@ -145,14 +136,11 @@ function guessingGame() {
     // If user guesses too high, alert them that their guess was too high and repeat the loop 
     else if(whatNumber > correctGuess){
       whatNumber = parseInt(prompt('Too high! Please try again. You have ' + guesses + ' of 4 guesses remaining.'));
-      console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
     } 
 
     // If user guesses too high, alert them that their guess was too high and repeat the loop 
     else if(whatNumber < correctGuess){
       whatNumber = parseInt(prompt('Too low! Please try again. You have used ' + guesses + ' of 4 guesses.'));
-      console.log(userName + ' has used ' + guesses + ' of 4 guesses.');
-
     } else { // If entry is non-numeric, count one guess and repeat loop
       whatNumber = parseInt(prompt('Sorry! Please try again. You have used ' + guesses + ' of 4 guesses.'));    
     }
@@ -171,52 +159,28 @@ function band() {
   // For loop of 6 guesses
   for(var j = 1; j < 7; j++){
     
-    /* for(var k = 0; k < myBritpopBands.length; k++) {
-      if(guessBand === myBritpopBands[k]) {
-        alert('nailed it!');
+    // If user guesses correctly, exit loop and add +1 to correctGuess score - can't get anything other than last value to register
+    if(guessBand == myBritpopBands[0] || guessBand == myBritpopBands[1] || guessBand == myBritpopBands[2]){
         correctAnswers++;
-        console.log(userName + ' guessed ' + guessBand + '.');
+        alert('Oi! You some kind of mind reader? That is indeed one of the UK\'s finest groups.');
         break;
       }
-      break;
-    }*/
-  
-
-
-
-
-
-  // If user guesses correctly, exit loop and add +1 to correctGuess score - can't get anything other than last value to register
-  if(guessBand == myBritpopBands[0] || guessBand == myBritpopBands[1] || guessBand == myBritpopBands[2]){
-      correctAnswers++;
-      alert('Oi! You some kind of mind reader? That is indeed one of the UK\'s finest groups.');
-      console.log(userName + ' guessed ' + guessBand + '.');
-      break;
-    }
 
     // If user exhausts their 6 attempts, exit loop and tell them what the possibilities were
     if(j === 6) {
       alert('Tough luck, mate. That\s a good one, but I was looking for one of the Big Three of ' + myBritpopBands[0] + ', ' + myBritpopBands[1] + ', or ' + myBritpopBands[2] + '.');
-      console.log(userName + ' guessed ' + guessBand + '.');
       break;
 
     } else { // Keep giving user guesses until they hit 6
       guessBand = prompt('Never heard of them. Try again! You have used ' + j + ' of 6 guesses.').toLowerCase();
-      console.log(userName + ' guessed ' + guessBand + '.');
     }
   }
 }
 band();
 
 
-
-
-
-
-
 function finalScore() {
   // Final tally of correct answers
-  console.log(userName + ' guessed ' + correctAnswers + ' of 7 questions correctly.');
   alert('You guessed ' + correctAnswers + ' of 7 questions correctly!');
 
   // Final summary with user's name
